@@ -1,4 +1,5 @@
 const fs = require('fs');
+const gitVersion = require('git-tag-version');
 
 const fileName = 'appVersion.js';
 
@@ -24,3 +25,5 @@ fs.readFile(fileName, 'utf8', (err, data) => {
   });
   return 0;
 });
+
+console.log(gitVersion());
